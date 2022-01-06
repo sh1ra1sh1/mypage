@@ -1,0 +1,290 @@
+:root {
+	--width: calc(max(100vw, 320px));
+	--height: calc(max(100vh, 800px));
+	--main-left: calc(max(var(--width) / 2 - 600px, 0px));
+	--main-right: calc(min(var(--width) / 2 + 600px, var(--width)));
+	--nav-height: 70px;
+	--hero-height: calc(270px + max(0px, 300px - var(--width) * 3 / 10));
+	--padding: calc(min(15px, var(--width) / 100));
+	--hero-imos: calc(max(min(250px, var(--width) / 4), 200px));
+}
+
+html, body {
+	width: calc(var(--width));
+}
+
+body {
+	background:
+		url(img/background.png) fixed repeat-x,
+		linear-gradient(0deg, #F0F8Fb, #F0F8Fb);
+	background-size:
+		calc(var(--hero-imos) * 6 / 5) calc(var(--hero-imos)),
+		500px 150px,
+		100%;
+	background-position:
+		calc(var(--main-right) - var(--hero-imos) * 6 / 5)
+		calc(var(--nav-height) + var(--hero-height) - var(--hero-imos) * 24 / 25),
+		0 calc(var(--nav-height) + var(--hero-height) - 150px),
+		0;
+
+	line-height: 1.9;
+	letter-spacing: -0.005em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+	color: #5050FF;
+	text-decoration: none;
+}
+
+body > nav {
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	width: calc(var(--width));
+	box-sizing: border-box;
+	height: calc(var(--nav-height));
+	padding:
+		0 calc(100vw - var(--main-right) + var(--padding) * 2)
+		0 calc(var(--main-left) + var(--padding) * 2);
+	background: #FFFFFF;
+	filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.05));
+}
+
+body > nav * {
+	/*display: inline-block;*/
+	display: inline-flex;
+	align-items: center;
+	height: calc(var(--nav-height));
+	line-height: calc(var(--nav-height));
+	vertical-align: middle;
+	text-decoration: none;
+	color: #20343D;
+	margin: 0;
+	padding: 0;
+}
+
+body > nav > a:first-child {
+	font-family: "Helvetica Neue";
+	font-weight: 400;
+	letter-spacing: 0.02ex;
+	word-spacing: -0.4ex;
+	font-size: 27px;
+}
+
+body > nav > a:first-child:before {
+	content: "";
+	display: inline-block;
+	height: calc(var(--nav-height) * 7 / 10);
+	width: calc(var(--nav-height) * 7 / 10);
+	background: url(img/icon.jpg) no-repeat;
+	margin: 0 8px;
+	border: 1px solid #EEEEEE;
+	background-size: calc(var(--nav-height) * 7 / 10);
+	vertical-align: middle;
+	border-radius: calc(var(--nav-height));
+}
+
+body > nav > a:first-child:after {
+	content: "白石研究室";
+	display: inline-block;
+	vertical-align: middle;
+	color: #113A4C;
+}
+
+body > nav > .head-menu > ul {
+	padding-left: 30px;
+}
+
+body > nav > .head-menu > ul > li > a {
+	padding: 0px 15px;
+}
+
+body > nav .menu_button {
+	float: right;
+	font-size: 250%;
+}
+
+body > nav .menu_button:before {
+	content: "≡";
+	color: #666;
+	display: none;
+	padding: 0 0 0.3ex calc(var(--padding) * 1);
+	line-height: calc(var(--nav-height) * 0.92);
+}
+
+body > nav .menu_button.visible:before {
+	content: "×";
+}
+
+body > header {
+	margin-top: calc(var(--nav-height));
+	width: calc(var(--width));
+	height: calc(var(--hero-height));
+	padding:
+		0px
+		calc(var(--width) - var(--main-right) + calc(var(--hero-imos)))
+		30px
+		calc(var(--main-left) + 30px);
+	box-sizing: border-box;
+	color: #FFFFFF;
+	text-shadow:
+		0px 0px 20px #20343DCC,
+		0px 1px 2px #20343D,
+		1px 0px 2px #20343D,
+		0px -1px 2px #20343D,
+		-1px 0px 2px #20343D;
+	display: block;
+	overflow-y: hidden;
+}
+
+body > header > section {
+	display: table-cell;
+	vertical-align: middle;
+	height: calc(var(--hero-height) - 50px);
+}
+
+body > header h1 {
+	margin: 0px;
+	font-size: calc(min(var(--width) / 20 + 15px, 40px));
+	font-weight: bold;
+	line-height: 150%;
+	word-break: keep-all;
+}
+
+body > header {
+	margin-top: calc(var(--nav-height));
+	width: calc(var(--width));
+	height: calc(var(--hero-height));
+	padding:
+		0px
+		calc(var(--width) - var(--main-right) + calc(var(--hero-imos)))
+		30px
+		calc(var(--main-left) + 30px);
+	box-sizing: border-box;
+	color: #FFFFFF;
+	text-shadow:
+		0px 0px 20px #113A4CCC,
+		0px 1px 2px #113A4C,
+		1px 0px 2px #113A4C,
+		0px -1px 2px #113A4C,
+		-1px 0px 2px #113A4C;
+	display: block;
+	overflow-y: hidden;
+}
+
+body > header > section {
+	display: table-cell;
+	vertical-align: middle;
+	height: calc(var(--hero-height) - 50px);
+}
+
+body > header h1 {
+	margin: 0px;
+	font-size: calc(min(var(--width) / 20 + 15px, 40px));
+	font-weight: bold;
+	line-height: 150%;
+	word-break: keep-all;
+}
+
+@media screen and (max-width: 750px){
+	body > header {
+		padding-left: calc(min(30px, var(--width) / 30));
+		padding-right: calc(min(30px, var(--width) / 30));
+		padding-bottom: calc(var(--hero-imos));
+	}
+
+	body > header > section {
+		height: calc(var(--hero-height) - var(--hero-imos) * 4 / 5);
+	}
+}
+
+body > main {
+	width: calc(var(--width));
+	display: flex;
+	background: #f0f0f5;
+	min-height: calc(var(--height) - var(--nav-height));
+	box-sizing: border-box;
+	padding:
+		0 calc(var(--main-left) + var(--padding))
+		0 calc(var(--width) - var(--main-right) + var(--padding));
+	text-align: justify;
+	overflow: hidden;
+}
+
+body > main > article {
+	width: 100%;
+	max-width: calc(min(100%, var(--width) - var(--padding) * 8));
+	min-height: calc(var(--height) - var(--nav-height));
+	margin: 0 calc(var(--padding));
+	padding: 15px calc(var(--padding) * 2) 90px calc(var(--padding) * 2);
+	background: #fff;
+	filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.05));
+}
+
+body > main > aside {
+	width: 300px;
+	min-width: 300px;
+	padding: 0px calc(var(--padding));
+}
+
+body > main > aside > section {
+	display: block;
+	width: 100%;
+	margin: 15px 0px;
+	padding: calc(min(var(--padding) * 2, 22px));
+	box-sizing: border-box;
+	border-radius: 8px;
+	background: #ffffff;
+	filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.05));
+} 
+
+footer {
+	text-align: center;
+	color: #FFFFFF;
+    background-color: #20343D;
+    height: auto;
+    width: calc(var(--widh));
+    padding: 10px;
+}
+
+/* パソコン用 */
+@media screen and (min-width: 751px) {
+	.hamburger-menu {
+		display: none;
+	}
+}
+
+/* スマートフォン用 */
+@media screen and (max-width: 750px) {
+	body > nav > .head-menu {
+		display: none;
+	}
+
+	body > nav > ul {
+		display: none;
+	}
+
+	body > nav .menu_button:before {
+		display: inline-block;
+	}
+
+	body > main > aside {
+		position: fixed;
+		background: #f0f0f5;
+		top: calc(var(--nav-height));
+		right: -400px;
+		height: calc(100vh - var(--nav-height));
+		overflow-y: scroll;
+		box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.5);
+		padding: 0 15px;
+	}
+
+	body > main > aside > section {
+		padding: 15px 15px;
+	}
+}
