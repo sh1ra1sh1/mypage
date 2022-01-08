@@ -284,7 +284,7 @@ p {
 	font-size: 15px;
 }
 
-article > section > p::first-letter {
+article > section > dl > p::first-letter {
 	margin-left: 15px;
 }
 
