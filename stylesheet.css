@@ -221,6 +221,10 @@ dt {
 	font-size: 17.5px;
 }
 
+dt:not(:first-child) {
+	margin-top: 12px;
+}
+
 dd {
 	font-size: 15px;
 	margin-left: 15px;
