@@ -265,6 +265,10 @@ h2::after {
 	background-color: #113A4C22;
 }
 
+dl {
+	margin-left: 8px;
+}
+
 dt {
 	color: #20343D;
 	font-weight: bolder;
