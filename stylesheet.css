@@ -84,7 +84,7 @@ body > nav > a:first-child:before {
 	display: inline-block;
 	height: calc(var(--nav-height) * 7 / 10);
 	width: calc(var(--nav-height) * 7 / 10);
-	background: url(img/icon.jpg) no-repeat;
+	background: url(./img/icon.png) no-repeat;
 	margin: 0 8px;
 	border: 1px solid #EEEEEE;
 	background-size: calc(var(--nav-height) * 7 / 10);
@@ -262,7 +262,7 @@ h2::after {
 	left: .7em;
 	width: 13px;
 	height: 13px;
-	background-color: #113A4C22;
+	background-color: #113A4C44;
 }
 
 dl {
