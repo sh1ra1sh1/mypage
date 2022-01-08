@@ -17,19 +17,9 @@ html, body {
 }
 
 body {
-	background:
-		url(img/background.png) fixed repeat-x,
-		linear-gradient(0deg, #F0F8Fb, #F0F8Fb);
-	background-size:
-		calc(var(--sunset) * 6 / 5) calc(var(--sunset)),
-		500px 150px,
-		100%;
-	background-position:
-		calc(var(--main-right) - var(--sunset) * 6 / 5)
-		calc(var(--nav-height) + var(--header-height) - var(--sunset) * 24 / 25),
-		0 calc(var(--nav-height) + var(--header-height) - 150px),
-		0;
-
+	background: url(img/background.png) fixed repeat-x, linear-gradient(0deg, #F0F8Fb, #F0F8Fb);
+	background-size: calc(var(--sunset) * 6 / 5) calc(var(--sunset)), 500px 150px, 100%;
+	background-position: calc(var(--main-right) - var(--sunset) * 6 / 5) calc(var(--nav-height) + var(--header-height) - var(--sunset) * 24 / 25), 0 calc(var(--nav-height) + var(--header-height) - 150px), 0;
 	line-height: 1.9;
 	letter-spacing: -0.005em;
 }
@@ -52,9 +42,7 @@ body > nav {
 	width: calc(var(--width));
 	box-sizing: border-box;
 	height: calc(var(--nav-height));
-	padding:
-		0 calc(100vw - var(--main-right) + var(--padding) * 2)
-		0 calc(var(--main-left) + var(--padding) * 2);
+	padding: 0 calc(100vw - var(--main-right) + var(--padding) * 2) 0 calc(var(--main-left) + var(--padding) * 2);
 	background: #FFFFFF;
 	filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.05));
 }
@@ -130,54 +118,10 @@ body > header {
 	margin-top: calc(var(--nav-height));
 	width: calc(var(--width));
 	height: calc(var(--header-height));
-	padding:
-		0px
-		calc(var(--width) - var(--main-right) + calc(var(--sunset)))
-		30px
-		calc(var(--main-left) + 30px);
+	padding: 0px calc(var(--width) - var(--main-right) + calc(var(--sunset))) 30px calc(var(--main-left) + 30px);
 	box-sizing: border-box;
 	color: #FFFFFF;
-	text-shadow:
-		0px 0px 20px #20343DCC,
-		0px 1px 2px #20343D,
-		1px 0px 2px #20343D,
-		0px -1px 2px #20343D,
-		-1px 0px 2px #20343D;
-	display: block;
-	overflow-y: hidden;
-}
-
-body > header > section {
-	display: table-cell;
-	vertical-align: middle;
-	height: calc(var(--header-height) - 50px);
-}
-
-body > header h1 {
-	margin: 0px;
-	font-size: calc(min(var(--width) / 20 + 15px, 40px));
-	font-weight: bold;
-	line-height: 150%;
-	word-break: keep-all;
-}
-
-body > header {
-	margin-top: calc(var(--nav-height));
-	width: calc(var(--width));
-	height: calc(var(--header-height));
-	padding:
-		0px
-		calc(var(--width) - var(--main-right) + calc(var(--sunset)))
-		30px
-		calc(var(--main-left) + 30px);
-	box-sizing: border-box;
-	color: #FFFFFF;
-	text-shadow:
-		0px 0px 20px #113A4CCC,
-		0px 1px 2px #113A4C,
-		1px 0px 2px #113A4C,
-		0px -1px 2px #113A4C,
-		-1px 0px 2px #113A4C;
+	text-shadow: 0px 0px 20px #20343DCC, 0px 1px 2px #20343D, 1px 0px 2px #20343D, 0px -1px 2px #20343D, -1px 0px 2px #20343D;
 	display: block;
 	overflow-y: hidden;
 }
@@ -214,9 +158,7 @@ body > main {
 	background: #f0f0f5;
 	min-height: calc(var(--height) - var(--nav-height));
 	box-sizing: border-box;
-	padding:
-		0 calc(var(--main-left) + var(--padding))
-		0 calc(var(--width) - var(--main-right) + var(--padding));
+	padding: 0 calc(var(--main-left) + var(--padding)) 0 calc(var(--width) - var(--main-right) + var(--padding));
 	text-align: justify;
 	font-family: 'Roboto', 'Kosugi', sans-serif;
 	overflow: hidden;
